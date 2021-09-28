@@ -51,7 +51,7 @@ Download CSV file
 Read CSV
         [Arguments]  ${ordersFile}
         
-        ${ordersTable}=    Read table from CSV     
+        ${ordersTable}=    Read table from CSV    ${ordersFile}  
         [Return]    ${ordersTable}
 
 *** Keywords ***
