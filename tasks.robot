@@ -44,7 +44,7 @@ Input
 *** Keywords ***
 Download CSV file
         [Arguments]  ${downloadUrl}
-        ${ordersFile}=  RPA.HTTP.Download       ${downloadUrl}    ${CURDIR}${/}output${/}orders.csv   overwrite=True
+        ${ordersFile}=  RPA.HTTP.Download       ${downloadUrl}    ${CURDIR}${/}output${/}orders.csv   overwrite=True 
         [Return]   ${ordersFile}
 
 *** Keywords ***
@@ -140,7 +140,8 @@ Order another
 
 *** Keywords ***
 Orders robots and create receipts
-        ${orders}=   Read table from CSV    orders.csv    
+        ${ordersTable}=    Read table from CSV     ${CURDIR}${/}output${/}orders.csv
+        #${orders}=   Read table from CSV    orders.csv    
         FOR    ${order}      IN      @{orders}
             Complete and submit the form for person    ${order}
             Create receipts    ${order}  
