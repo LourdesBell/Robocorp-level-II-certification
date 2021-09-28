@@ -164,8 +164,8 @@ Minimal task
    
    Download CSV file    ${downloadUrl}
    
-   ${orders}=   Read CSV   ${downloadUrl}
-   Log      ${orders}
+   #${orders}=   Read CSV   ${downloadUrl}
+   #Log      ${orders}
    
    Open browser 
    Orders robots and create receipts
