@@ -140,7 +140,7 @@ Order another
 
 *** Keywords ***
 Orders robots and create receipts
-        ${ordersTable}=    Read table from CSV     ${CURDIR}${/}output${/}orders.csv
+        #${ordersTable}=    Read table from CSV     ${CURDIR}${/}output${/}orders.csv
         #${orders}=   Read table from CSV    orders.csv    
         FOR    ${order}      IN      @{orders}
             Complete and submit the form for person    ${order}
