@@ -140,7 +140,7 @@ Order another
 
 *** Keywords ***
 Orders robots and create receipts
-        [Arguments]   ${orders}   ${orders}
+        [Arguments]   ${order}   ${orders}
         #${ordersTable}=    Read table from CSV     ${CURDIR}${/}output${/}orders.csv
         ${orders}=   Read table from CSV    orders.csv    
         FOR    ${order}      IN      @{orders}
